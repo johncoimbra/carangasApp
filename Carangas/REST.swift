@@ -18,7 +18,6 @@ enum RESTOperation {
 class REST {
     
     private static let basePath = "https://carangas.herokuapp.com/cars"
-    private static let fipePath = "https://parallelum.com.br/fipe/api/v1/carros/marcas"
     
     private static let configuration: URLSessionConfiguration = {
         let config = URLSessionConfiguration.default
@@ -31,8 +30,8 @@ class REST {
     
     private static let session = URLSession(configuration: configuration)
     
-    class func loadBrands(onComplete:@escaping ([Brand?])->Void) {
-        guard let url = URL(string: fipePath) else {
+    class func loadBrands(onComplete:@escaping ([Brand]?)->Void) {
+        guard let url = URL(string: "https://parallelum.com.br/fipe/api/v1/carros/marcas") else {
             onComplete(nil)
             return
         }

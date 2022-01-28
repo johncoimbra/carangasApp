@@ -117,7 +117,7 @@ extension AddEditViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         return brands.count
     }
     
-    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let brand = brands[row]
         return brand.nome
     }
