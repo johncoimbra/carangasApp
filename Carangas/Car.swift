@@ -1,6 +1,6 @@
 import Foundation
 
-class Cars: Codable {
+class Car: Codable {
     
     var _id: String?
     var brand: String = ""
@@ -18,5 +18,8 @@ class Cars: Codable {
                 return "Gasolina"
         }
     }
-    
+}
+
+struct Brand: Codable {
+    let nome: String
 }
